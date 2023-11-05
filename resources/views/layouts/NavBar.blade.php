@@ -35,8 +35,8 @@
             @if(Auth::user()->hasRole('Admin'))
                 <li class="nav-item"><a href="{{route('home')}}">Users</a></li>
             @endif
-            <li class="nav-item"><a href="{{route('feedback')}}">FeedBack</a></li>
-            <li class="nav-item"><a href="{{route('home')}}">Create Post</a></li>
+            <li class="nav-item"><a href="{{route('feedback')}}">Submit FeedBack</a></li>
+            <li class="nav-item"><a href="{{route('allfeedback')}}">All Feedbacks</a></li>
             @if(Auth::user())
                 <div class="topnav-right">
                     <li class="nav-item dropdown">

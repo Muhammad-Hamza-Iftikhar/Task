@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -22,7 +23,9 @@ Route::get('/', function () {
 Route::middleware(['auth'])->group(function () {
     Route::get('home', [UserController::class , 'home'])->name('home');
     Route::get('feedback' , [FeedbackController::class , 'index'])->name('feedback');
-    Route::post('submitFeedbak' , [FeedbackController::class , 'submit'])->name('submitFeedbak');
+    Route::get('allfeedback' , [FeedbackController::class , 'show'])->name('allfeedback');
+    Route::post('submitFeedbak' , [FeedbackController::class , 'create'])->name('submitFeedbak');
+//    Route::get('comments' , [CommentsController::class , 'index'])->name('comments');
 });
 //
 //Route::middleware(['auth', 'CheckAdmin'])->group(function () {

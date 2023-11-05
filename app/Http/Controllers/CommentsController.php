@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\comments;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class CommentsController extends Controller
 {
@@ -12,15 +14,28 @@ class CommentsController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        try {
+            DB::beginTransaction();
+            $comment = comments::create([
+                'content' => $request->comment,
+                'userId' => Auth::id(),
+                'feedbackId' => $request->feedbackId,
+            ]);
+            DB::commit();
+            return response('success');
+        }
+        catch (\Exception $e){
+            DB::rollBack();
+            return response('failed');
+        }
     }
 
     /**
