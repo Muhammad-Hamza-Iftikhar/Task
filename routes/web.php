@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\FeedbackController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +16,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('home', [UserController::class , 'home'])->name('home');
+    Route::get('feedback' , [FeedbackController::class , 'index'])->name('feedback');
+    Route::post('submitFeedbak' , [FeedbackController::class , 'submit'])->name('submitFeedbak');
+});
+//
+//Route::middleware(['auth', 'CheckAdmin'])->group(function () {
+//    Route::get('/admin', function () {
+//        return "Admin";
+//    });
+//});

@@ -1,0 +1,180 @@
+
+.navmenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+}
+
+.topnav-right {
+    float: right !important;
+}
+
+.navmenuitem {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none !important;
+}
+li a:hover:not(.active) {
+    background-color: #ddd;
+}
+#error {
+    display: none;
+}
+#error.show {
+    display: block;
+}
+#errorEmail {
+    display: none;
+}
+
+#errorEmail.show {
+    display: block;
+}
+#errorWebsite {
+    display: none;
+}
+
+#errorWebsite.show {
+    display: block;
+}
+
+#errorFirstName {
+    display: none;
+}
+
+#errorFirstName.show {
+    display: block;
+}
+#errorLastName {
+    display: none;
+}
+
+#errorLastName.show {
+    display: block;        }
+#errorPhone {
+    display: none;
+}
+
+#errorPhone.show {
+    display: block;
+}
+#FirstNameError {
+    display: none;
+}
+
+#FirstNameError.show {
+    display: block;
+}
+
+#LastNameError {
+    display: none;
+}
+
+#LastNameError.show {
+    display: block;
+}
+#EmailError {
+    display: none;
+}
+
+#EmailError.show {
+    display: block;
+}
+
+#PasswordError {
+    display: none;
+}
+
+#PasswordError.show {
+    display: block;
+}
+#AgeError {
+    display: none;
+}
+
+#AgeError.show {
+    display: block;
+}
+
+#DateError {
+    display: none;
+}
+
+#DateError.show {
+    display: block;
+}
+
+#PhoneError {
+    display: none;
+}
+
+#PhoneError.show {
+    display: block;
+}
+
+#EFirstNameError {
+    display: none;
+}
+
+#EFirstNameError.show {
+    display: block;
+}
+
+#ELastNameError {
+    display: none;
+}
+
+#ELastNameError.show {
+    display: block;
+}
+#EEmailError {
+    display: none;
+}
+
+#EEmailError.show {
+    display: block;
+}
+
+#EPasswordError {
+    display: none;
+}
+
+#EPasswordError.show {
+    display: block;
+}
+#EAgeError {
+    display: none;
+}
+
+#EAgeError.show {
+    display: block;
+}
+
+#EDateError {
+    display: none;
+}
+
+#EDateError.show {
+    display: block;
+}
+
+#EPhoneError {
+    display: none;
+}
+
+#EPhoneError.show {
+    display: block;
+}
+
+.invalid {
+    color: #FF0000;
+}
